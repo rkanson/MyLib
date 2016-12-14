@@ -7,23 +7,73 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		118734DE87ADD1D6D1A527BA /* Pods_CS498_Final_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD67D7CEE0ACC361882876A /* Pods_CS498_Final_Project.framework */; };
+		A818C7721DFB2CB2006E3C39 /* LibraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A818C7711DFB2CB2006E3C39 /* LibraryTableViewController.swift */; };
+		A818C7741DFB2CCA006E3C39 /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A818C7731DFB2CCA006E3C39 /* AddBookViewController.swift */; };
+		A818C7B61DFF2516006E3C39 /* appicon.png in Resources */ = {isa = PBXBuildFile; fileRef = A818C7A01DFF2516006E3C39 /* appicon.png */; };
+		A818C7B71DFF2516006E3C39 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = A818C7A31DFF2516006E3C39 /* Contents.json */; };
+		A818C7B81DFF2516006E3C39 /* library-20.png in Resources */ = {isa = PBXBuildFile; fileRef = A818C7A41DFF2516006E3C39 /* library-20.png */; };
+		A818C7B91DFF2516006E3C39 /* library-20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A818C7A51DFF2516006E3C39 /* library-20@2x.png */; };
+		A818C7BA1DFF2516006E3C39 /* library-20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A818C7A61DFF2516006E3C39 /* library-20@3x.png */; };
+		A818C7BB1DFF2516006E3C39 /* library-29.png in Resources */ = {isa = PBXBuildFile; fileRef = A818C7A71DFF2516006E3C39 /* library-29.png */; };
+		A818C7BC1DFF2516006E3C39 /* library-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A818C7A81DFF2516006E3C39 /* library-29@2x.png */; };
+		A818C7BD1DFF2516006E3C39 /* library-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A818C7A91DFF2516006E3C39 /* library-29@3x.png */; };
+		A818C7BE1DFF2516006E3C39 /* library-40.png in Resources */ = {isa = PBXBuildFile; fileRef = A818C7AA1DFF2516006E3C39 /* library-40.png */; };
+		A818C7BF1DFF2516006E3C39 /* library-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A818C7AB1DFF2516006E3C39 /* library-40@2x.png */; };
+		A818C7C01DFF2516006E3C39 /* library-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A818C7AC1DFF2516006E3C39 /* library-40@3x.png */; };
+		A818C7C11DFF2516006E3C39 /* library-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A818C7AD1DFF2516006E3C39 /* library-60@2x.png */; };
+		A818C7C21DFF2516006E3C39 /* library-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A818C7AE1DFF2516006E3C39 /* library-60@3x.png */; };
+		A818C7C31DFF2516006E3C39 /* library-76.png in Resources */ = {isa = PBXBuildFile; fileRef = A818C7AF1DFF2516006E3C39 /* library-76.png */; };
+		A818C7C41DFF2516006E3C39 /* library-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A818C7B01DFF2516006E3C39 /* library-76@2x.png */; };
+		A818C7C51DFF2516006E3C39 /* library-83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A818C7B11DFF2516006E3C39 /* library-83.5@2x.png */; };
+		A818C7C61DFF2516006E3C39 /* library.png in Resources */ = {isa = PBXBuildFile; fileRef = A818C7B21DFF2516006E3C39 /* library.png */; };
+		A818C7C71DFF2516006E3C39 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = A818C7B31DFF2516006E3C39 /* search.png */; };
+		A818C7C81DFF2516006E3C39 /* wishlist.png in Resources */ = {isa = PBXBuildFile; fileRef = A818C7B41DFF2516006E3C39 /* wishlist.png */; };
+		A83575601E00F17200E5C4E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A835755E1E00F17200E5C4E7 /* LaunchScreen.storyboard */; };
+		A83575611E00F17200E5C4E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A835755F1E00F17200E5C4E7 /* Main.storyboard */; };
+		A83575631E00F1EE00E5C4E7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83575621E00F1EE00E5C4E7 /* SearchViewController.swift */; };
 		A8CD16821DE2270C00EBA9FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD16811DE2270C00EBA9FB /* AppDelegate.swift */; };
-		A8CD16841DE2270C00EBA9FB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD16831DE2270C00EBA9FB /* FirstViewController.swift */; };
-		A8CD16861DE2270C00EBA9FB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD16851DE2270C00EBA9FB /* SecondViewController.swift */; };
-		A8CD16891DE2270C00EBA9FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8CD16871DE2270C00EBA9FB /* Main.storyboard */; };
 		A8CD168B1DE2270C00EBA9FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8CD168A1DE2270C00EBA9FB /* Assets.xcassets */; };
-		A8CD168E1DE2270C00EBA9FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8CD168C1DE2270C00EBA9FB /* LaunchScreen.storyboard */; };
+		A8F698351DFF2E2800788F78 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F698341DFF2E2800788F78 /* BookDetailViewController.swift */; };
+		A8F6985B1DFF4E2100788F78 /* WishlistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F6985A1DFF4E2100788F78 /* WishlistTableViewController.swift */; };
+		A8F6985D1DFF622600788F78 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A8F6985C1DFF622600788F78 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		338B79E09D9C5C7C6CE2047A /* Pods-CS498 Final Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CS498 Final Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CS498 Final Project/Pods-CS498 Final Project.debug.xcconfig"; sourceTree = "<group>"; };
+		68979A70D02EA4D332428F8A /* Pods-CS498 Final Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CS498 Final Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-CS498 Final Project/Pods-CS498 Final Project.release.xcconfig"; sourceTree = "<group>"; };
+		A818C7711DFB2CB2006E3C39 /* LibraryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryTableViewController.swift; sourceTree = "<group>"; };
+		A818C7731DFB2CCA006E3C39 /* AddBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
+		A818C7A01DFF2516006E3C39 /* appicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appicon.png; path = "CS498 Final Project/appicon.png"; sourceTree = "<group>"; };
+		A818C7A31DFF2516006E3C39 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		A818C7A41DFF2516006E3C39 /* library-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "library-20.png"; sourceTree = "<group>"; };
+		A818C7A51DFF2516006E3C39 /* library-20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "library-20@2x.png"; sourceTree = "<group>"; };
+		A818C7A61DFF2516006E3C39 /* library-20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "library-20@3x.png"; sourceTree = "<group>"; };
+		A818C7A71DFF2516006E3C39 /* library-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "library-29.png"; sourceTree = "<group>"; };
+		A818C7A81DFF2516006E3C39 /* library-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "library-29@2x.png"; sourceTree = "<group>"; };
+		A818C7A91DFF2516006E3C39 /* library-29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "library-29@3x.png"; sourceTree = "<group>"; };
+		A818C7AA1DFF2516006E3C39 /* library-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "library-40.png"; sourceTree = "<group>"; };
+		A818C7AB1DFF2516006E3C39 /* library-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "library-40@2x.png"; sourceTree = "<group>"; };
+		A818C7AC1DFF2516006E3C39 /* library-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "library-40@3x.png"; sourceTree = "<group>"; };
+		A818C7AD1DFF2516006E3C39 /* library-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "library-60@2x.png"; sourceTree = "<group>"; };
+		A818C7AE1DFF2516006E3C39 /* library-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "library-60@3x.png"; sourceTree = "<group>"; };
+		A818C7AF1DFF2516006E3C39 /* library-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "library-76.png"; sourceTree = "<group>"; };
+		A818C7B01DFF2516006E3C39 /* library-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "library-76@2x.png"; sourceTree = "<group>"; };
+		A818C7B11DFF2516006E3C39 /* library-83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "library-83.5@2x.png"; sourceTree = "<group>"; };
+		A818C7B21DFF2516006E3C39 /* library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = library.png; path = "CS498 Final Project/library.png"; sourceTree = "<group>"; };
+		A818C7B31DFF2516006E3C39 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = search.png; path = "CS498 Final Project/search.png"; sourceTree = "<group>"; };
+		A818C7B41DFF2516006E3C39 /* wishlist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wishlist.png; path = "CS498 Final Project/wishlist.png"; sourceTree = "<group>"; };
+		A835755E1E00F17200E5C4E7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A835755F1E00F17200E5C4E7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A83575621E00F1EE00E5C4E7 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A8CD167E1DE2270C00EBA9FB /* CS498 Final Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CS498 Final Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8CD16811DE2270C00EBA9FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A8CD16831DE2270C00EBA9FB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		A8CD16851DE2270C00EBA9FB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		A8CD16881DE2270C00EBA9FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8CD168A1DE2270C00EBA9FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A8CD168D1DE2270C00EBA9FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8CD168F1DE2270C00EBA9FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8F698341DFF2E2800788F78 /* BookDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		A8F6985A1DFF4E2100788F78 /* WishlistTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistTableViewController.swift; sourceTree = "<group>"; };
+		A8F6985C1DFF622600788F78 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ABD67D7CEE0ACC361882876A /* Pods_CS498_Final_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CS498_Final_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +81,73 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				118734DE87ADD1D6D1A527BA /* Pods_CS498_Final_Project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8351D8950A2A271962BB5FE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				338B79E09D9C5C7C6CE2047A /* Pods-CS498 Final Project.debug.xcconfig */,
+				68979A70D02EA4D332428F8A /* Pods-CS498 Final Project.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		84110278FDF83722A6A908E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABD67D7CEE0ACC361882876A /* Pods_CS498_Final_Project.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A818C7A11DFF2516006E3C39 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A818C7A21DFF2516006E3C39 /* AppIcon.appiconset */,
+			);
+			name = iOS;
+			path = "CS498 Final Project/iOS";
+			sourceTree = "<group>";
+		};
+		A818C7A21DFF2516006E3C39 /* AppIcon.appiconset */ = {
+			isa = PBXGroup;
+			children = (
+				A818C7A31DFF2516006E3C39 /* Contents.json */,
+				A818C7A41DFF2516006E3C39 /* library-20.png */,
+				A818C7A51DFF2516006E3C39 /* library-20@2x.png */,
+				A818C7A61DFF2516006E3C39 /* library-20@3x.png */,
+				A818C7A71DFF2516006E3C39 /* library-29.png */,
+				A818C7A81DFF2516006E3C39 /* library-29@2x.png */,
+				A818C7A91DFF2516006E3C39 /* library-29@3x.png */,
+				A818C7AA1DFF2516006E3C39 /* library-40.png */,
+				A818C7AB1DFF2516006E3C39 /* library-40@2x.png */,
+				A818C7AC1DFF2516006E3C39 /* library-40@3x.png */,
+				A818C7AD1DFF2516006E3C39 /* library-60@2x.png */,
+				A818C7AE1DFF2516006E3C39 /* library-60@3x.png */,
+				A818C7AF1DFF2516006E3C39 /* library-76.png */,
+				A818C7B01DFF2516006E3C39 /* library-76@2x.png */,
+				A818C7B11DFF2516006E3C39 /* library-83.5@2x.png */,
+			);
+			path = AppIcon.appiconset;
+			sourceTree = "<group>";
+		};
 		A8CD16751DE2270B00EBA9FB = {
 			isa = PBXGroup;
 			children = (
+				A818C7A11DFF2516006E3C39 /* iOS */,
+				A818C7B21DFF2516006E3C39 /* library.png */,
+				A818C7B41DFF2516006E3C39 /* wishlist.png */,
+				A818C7B31DFF2516006E3C39 /* search.png */,
+				A818C7A01DFF2516006E3C39 /* appicon.png */,
 				A8CD16801DE2270C00EBA9FB /* CS498 Final Project */,
 				A8CD167F1DE2270C00EBA9FB /* Products */,
+				8351D8950A2A271962BB5FE6 /* Pods */,
+				84110278FDF83722A6A908E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +162,16 @@
 		A8CD16801DE2270C00EBA9FB /* CS498 Final Project */ = {
 			isa = PBXGroup;
 			children = (
+				A835755E1E00F17200E5C4E7 /* LaunchScreen.storyboard */,
+				A835755F1E00F17200E5C4E7 /* Main.storyboard */,
 				A8CD16811DE2270C00EBA9FB /* AppDelegate.swift */,
-				A8CD16831DE2270C00EBA9FB /* FirstViewController.swift */,
-				A8CD16851DE2270C00EBA9FB /* SecondViewController.swift */,
-				A8CD16871DE2270C00EBA9FB /* Main.storyboard */,
+				A818C7711DFB2CB2006E3C39 /* LibraryTableViewController.swift */,
+				A818C7731DFB2CCA006E3C39 /* AddBookViewController.swift */,
+				A8F698341DFF2E2800788F78 /* BookDetailViewController.swift */,
+				A8F6985A1DFF4E2100788F78 /* WishlistTableViewController.swift */,
+				A83575621E00F1EE00E5C4E7 /* SearchViewController.swift */,
 				A8CD168A1DE2270C00EBA9FB /* Assets.xcassets */,
-				A8CD168C1DE2270C00EBA9FB /* LaunchScreen.storyboard */,
+				A8F6985C1DFF622600788F78 /* GoogleService-Info.plist */,
 				A8CD168F1DE2270C00EBA9FB /* Info.plist */,
 			);
 			path = "CS498 Final Project";
@@ -74,9 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8CD16921DE2270C00EBA9FB /* Build configuration list for PBXNativeTarget "CS498 Final Project" */;
 			buildPhases = (
+				E8179ED8D6F61EF83A12A1CB /* [CP] Check Pods Manifest.lock */,
 				A8CD167A1DE2270B00EBA9FB /* Sources */,
 				A8CD167B1DE2270B00EBA9FB /* Frameworks */,
 				A8CD167C1DE2270B00EBA9FB /* Resources */,
+				9952AF81C05578A95C6FDE59 /* [CP] Embed Pods Frameworks */,
+				D3634FEFC97371E81CAD2FB6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,45 +238,97 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8CD168E1DE2270C00EBA9FB /* LaunchScreen.storyboard in Resources */,
+				A818C7C81DFF2516006E3C39 /* wishlist.png in Resources */,
+				A83575611E00F17200E5C4E7 /* Main.storyboard in Resources */,
+				A818C7C61DFF2516006E3C39 /* library.png in Resources */,
+				A818C7C01DFF2516006E3C39 /* library-40@3x.png in Resources */,
+				A818C7BC1DFF2516006E3C39 /* library-29@2x.png in Resources */,
+				A818C7B71DFF2516006E3C39 /* Contents.json in Resources */,
+				A818C7C11DFF2516006E3C39 /* library-60@2x.png in Resources */,
 				A8CD168B1DE2270C00EBA9FB /* Assets.xcassets in Resources */,
-				A8CD16891DE2270C00EBA9FB /* Main.storyboard in Resources */,
+				A818C7B91DFF2516006E3C39 /* library-20@2x.png in Resources */,
+				A83575601E00F17200E5C4E7 /* LaunchScreen.storyboard in Resources */,
+				A818C7C51DFF2516006E3C39 /* library-83.5@2x.png in Resources */,
+				A818C7BB1DFF2516006E3C39 /* library-29.png in Resources */,
+				A818C7C31DFF2516006E3C39 /* library-76.png in Resources */,
+				A818C7B61DFF2516006E3C39 /* appicon.png in Resources */,
+				A818C7C41DFF2516006E3C39 /* library-76@2x.png in Resources */,
+				A818C7C21DFF2516006E3C39 /* library-60@3x.png in Resources */,
+				A818C7BE1DFF2516006E3C39 /* library-40.png in Resources */,
+				A818C7BA1DFF2516006E3C39 /* library-20@3x.png in Resources */,
+				A818C7C71DFF2516006E3C39 /* search.png in Resources */,
+				A8F6985D1DFF622600788F78 /* GoogleService-Info.plist in Resources */,
+				A818C7BF1DFF2516006E3C39 /* library-40@2x.png in Resources */,
+				A818C7BD1DFF2516006E3C39 /* library-29@3x.png in Resources */,
+				A818C7B81DFF2516006E3C39 /* library-20.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9952AF81C05578A95C6FDE59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CS498 Final Project/Pods-CS498 Final Project-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3634FEFC97371E81CAD2FB6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CS498 Final Project/Pods-CS498 Final Project-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8179ED8D6F61EF83A12A1CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A8CD167A1DE2270B00EBA9FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8CD16861DE2270C00EBA9FB /* SecondViewController.swift in Sources */,
+				A83575631E00F1EE00E5C4E7 /* SearchViewController.swift in Sources */,
+				A818C7741DFB2CCA006E3C39 /* AddBookViewController.swift in Sources */,
 				A8CD16821DE2270C00EBA9FB /* AppDelegate.swift in Sources */,
-				A8CD16841DE2270C00EBA9FB /* FirstViewController.swift in Sources */,
+				A8F698351DFF2E2800788F78 /* BookDetailViewController.swift in Sources */,
+				A8F6985B1DFF4E2100788F78 /* WishlistTableViewController.swift in Sources */,
+				A818C7721DFB2CB2006E3C39 /* LibraryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		A8CD16871DE2270C00EBA9FB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A8CD16881DE2270C00EBA9FB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A8CD168C1DE2270C00EBA9FB /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A8CD168D1DE2270C00EBA9FB /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A8CD16901DE2270C00EBA9FB /* Debug */ = {
@@ -253,6 +418,7 @@
 		};
 		A8CD16931DE2270C00EBA9FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 338B79E09D9C5C7C6CE2047A /* Pods-CS498 Final Project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CS498 Final Project/Info.plist";
@@ -264,6 +430,7 @@
 		};
 		A8CD16941DE2270C00EBA9FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68979A70D02EA4D332428F8A /* Pods-CS498 Final Project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CS498 Final Project/Info.plist";
@@ -292,6 +459,7 @@
 				A8CD16941DE2270C00EBA9FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

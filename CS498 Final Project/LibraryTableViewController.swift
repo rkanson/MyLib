@@ -1,0 +1,58 @@
+//
+//  LibraryTableViewController.swift
+//  CS498 Final Project
+//
+//  Created by Rich Kanson on 12/9/16.
+//  Copyright © 2016 Richard Kanson. All rights reserved.
+//
+
+import Firebase
+import UIKit
+
+struct bookStruct {
+    let title: String!
+    let author: String!
+    let coverURL: String!
+}
+
+class LibraryTableViewController: UITableViewController{
+    
+    var books = [bookStruct]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let ref = FIRDatabase.database().reference()
+        ref.child("library").queryOrderedByKey().observeEventType(.ChildAdded, withBlock: { snapshot in
+            let title = snapshot.value!["title"] as! String
+            let author = snapshot.value!["author"] as! String
+            let coverURL = snapshot.value!["coverURL"] as! String!
+            self.books.insert(bookStruct(title: title, author: author, coverURL: coverURL), atIndex: 0)
+            self.tableView.reloadData()
+        })
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return books.count;
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("libraryCell", forIndexPath: indexPath)
+            cell.textLabel?.text = books[indexPath.row].title
+            cell.detailTextLabel?.text = books[indexPath.row].author
+            return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "librarySegue" {
+            let destination = segue.destinationViewController as? BookDetailViewController
+            let indexPath = tableView.indexPathForSelectedRow!
+            let bTitle = books[indexPath.row].title
+            let author = books[indexPath.row].author
+            destination?.bTitle = bTitle
+            destination?.author = author
+            destination?.coverURL = books[indexPath.row].coverURL
+        }
+    }
+    
+}
