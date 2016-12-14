@@ -15,15 +15,16 @@ struct bookStruct {
     let coverURL: String!
 }
 
-class LibraryTableViewController: UITableViewController{
+class LibraryTableViewController: UITableViewController {
     
     var books = [bookStruct]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let ref = FIRDatabase.database().reference()
-        ref.child("library").queryOrderedByKey().observeEventType(.ChildAdded, withBlock: { snapshot in
+        let user = FIRAuth.auth()?.currentUser?.uid
+        print(user)
+        ref.child("library").child(user!).queryOrderedByKey().observeEventType(.ChildAdded, withBlock: { snapshot in
             let title = snapshot.value!["title"] as! String
             let author = snapshot.value!["author"] as! String
             let coverURL = snapshot.value!["coverURL"] as! String!
@@ -38,9 +39,14 @@ class LibraryTableViewController: UITableViewController{
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("libraryCell", forIndexPath: indexPath)
-            cell.textLabel?.text = books[indexPath.row].title
-            cell.detailTextLabel?.text = books[indexPath.row].author
-            return cell
+        cell.textLabel?.text = books[indexPath.row].title
+        cell.detailTextLabel?.text = books[indexPath.row].author
+        if let url = NSURL(string: books[indexPath.row].coverURL) {
+            if let data = NSData(contentsOfURL: url) {
+                cell.imageView?.image = UIImage(data: data)
+            }
+        }
+        return cell
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -54,5 +60,4 @@ class LibraryTableViewController: UITableViewController{
             destination?.coverURL = books[indexPath.row].coverURL
         }
     }
-    
 }

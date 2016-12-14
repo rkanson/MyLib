@@ -32,6 +32,7 @@
 		A83575601E00F17200E5C4E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A835755E1E00F17200E5C4E7 /* LaunchScreen.storyboard */; };
 		A83575611E00F17200E5C4E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A835755F1E00F17200E5C4E7 /* Main.storyboard */; };
 		A83575631E00F1EE00E5C4E7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83575621E00F1EE00E5C4E7 /* SearchViewController.swift */; };
+		A83575651E01B51D00E5C4E7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83575641E01B51D00E5C4E7 /* LoginViewController.swift */; };
 		A8CD16821DE2270C00EBA9FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD16811DE2270C00EBA9FB /* AppDelegate.swift */; };
 		A8CD168B1DE2270C00EBA9FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8CD168A1DE2270C00EBA9FB /* Assets.xcassets */; };
 		A8F698351DFF2E2800788F78 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F698341DFF2E2800788F78 /* BookDetailViewController.swift */; };
@@ -66,6 +67,7 @@
 		A835755E1E00F17200E5C4E7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A835755F1E00F17200E5C4E7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A83575621E00F1EE00E5C4E7 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		A83575641E01B51D00E5C4E7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A8CD167E1DE2270C00EBA9FB /* CS498 Final Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CS498 Final Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8CD16811DE2270C00EBA9FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8CD168A1DE2270C00EBA9FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				A835755E1E00F17200E5C4E7 /* LaunchScreen.storyboard */,
 				A835755F1E00F17200E5C4E7 /* Main.storyboard */,
 				A8CD16811DE2270C00EBA9FB /* AppDelegate.swift */,
+				A83575641E01B51D00E5C4E7 /* LoginViewController.swift */,
 				A818C7711DFB2CB2006E3C39 /* LibraryTableViewController.swift */,
 				A818C7731DFB2CCA006E3C39 /* AddBookViewController.swift */,
 				A8F698341DFF2E2800788F78 /* BookDetailViewController.swift */,
@@ -212,6 +215,7 @@
 				TargetAttributes = {
 					A8CD167D1DE2270B00EBA9FB = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = D45G7B4M4W;
 					};
 				};
 			};
@@ -319,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A83575651E01B51D00E5C4E7 /* LoginViewController.swift in Sources */,
 				A83575631E00F1EE00E5C4E7 /* SearchViewController.swift in Sources */,
 				A818C7741DFB2CCA006E3C39 /* AddBookViewController.swift in Sources */,
 				A8CD16821DE2270C00EBA9FB /* AppDelegate.swift in Sources */,
@@ -421,10 +426,13 @@
 			baseConfigurationReference = 338B79E09D9C5C7C6CE2047A /* Pods-CS498 Final Project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "CS498 Final Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.monmouth.cs498.s0932483.CS498-Final-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -433,10 +441,13 @@
 			baseConfigurationReference = 68979A70D02EA4D332428F8A /* Pods-CS498 Final Project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "CS498 Final Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.monmouth.cs498.s0932483.CS498-Final-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

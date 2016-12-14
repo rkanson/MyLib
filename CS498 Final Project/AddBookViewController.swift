@@ -38,6 +38,7 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
         let author = authorTextField.text
         let title = bookTitleTextField.text
         let imgName = title! + ".png"
+        let user = FIRAuth.auth()?.currentUser!.uid
         
         let storageRef = FIRStorage.storage().reference().child(imgName)
         if let uploadData = UIImagePNGRepresentation(coverImage.image!) {
@@ -50,7 +51,7 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
                     let book: [String: AnyObject] = ["author": author!, "title": title!, "coverURL": coverIMGURL]
                     let ref = FIRDatabase.database().reference()
                     let key = ref.child("books").childByAutoId().key
-                    ref.child("library").child(key).setValue(book)
+                    ref.child("library").child(user!).child(key).setValue(book)
                 }
             })
         }
