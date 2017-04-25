@@ -16,13 +16,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
     
     @IBAction func loginButtonPressed(sender: AnyObject) {
@@ -44,10 +39,10 @@ class LoginViewController: UIViewController {
     @IBAction func createAccountButtonPressed(sender: AnyObject) {
         FIRAuth.auth()?.createUserWithEmail(emailField.text!, password: passwordField.text!, completion: { (user: FIRUser?, error) in
             if error != nil {
-                let alert = UIAlertController()
-                alert.title = "Error"
-                alert.message = "Error creating user. Please try again."
-                self.presentViewController(alert, animated: true, completion: nil)
+                let alertController = UIAlertController(title: "Error", message: "Invalid entry. Try again.",preferredStyle: .Alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                alertController.addAction(defaultAction)
+                self.presentViewController(alertController, animated: true, completion: nil)
                 
             }
             else {
@@ -55,6 +50,10 @@ class LoginViewController: UIViewController {
                 self.performSegueWithIdentifier("loginSegue",sender: self)
             }
         })
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
     
 }

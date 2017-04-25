@@ -15,6 +15,12 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet var bookTitleTextField: UITextField!
     @IBOutlet var authorTextField: UITextField!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
     @IBAction func takePhotoAction(sender: UIButton) {
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -59,12 +65,8 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
         navigationController!.popViewControllerAnimated(true)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
     
 }

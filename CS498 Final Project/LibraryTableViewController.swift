@@ -23,7 +23,6 @@ class LibraryTableViewController: UITableViewController {
         super.viewDidLoad()
         let ref = FIRDatabase.database().reference()
         let user = FIRAuth.auth()?.currentUser?.uid
-        print(user)
         ref.child("library").child(user!).queryOrderedByKey().observeEventType(.ChildAdded, withBlock: { snapshot in
             let title = snapshot.value!["title"] as! String
             let author = snapshot.value!["author"] as! String
@@ -49,6 +48,17 @@ class LibraryTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            books.removeAtIndex(indexPath.row)
+            self.tableView.reloadData()
+        }
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "librarySegue" {
             let destination = segue.destinationViewController as? BookDetailViewController
@@ -60,4 +70,5 @@ class LibraryTableViewController: UITableViewController {
             destination?.coverURL = books[indexPath.row].coverURL
         }
     }
+
 }

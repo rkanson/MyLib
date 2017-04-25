@@ -10,11 +10,11 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
+    @IBOutlet var webView: UIWebView!
+    
     override func viewDidLoad() {
+        let url = NSURL (string: "https://www.amazon.com/gp/aw/ref=aw_c_gw")
+        let requestObj = NSURLRequest(URL: url!)
+        webView.loadRequest(requestObj)
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
 }

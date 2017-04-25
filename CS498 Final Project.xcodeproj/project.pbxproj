@@ -33,6 +33,9 @@
 		A83575611E00F17200E5C4E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A835755F1E00F17200E5C4E7 /* Main.storyboard */; };
 		A83575631E00F1EE00E5C4E7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83575621E00F1EE00E5C4E7 /* SearchViewController.swift */; };
 		A83575651E01B51D00E5C4E7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83575641E01B51D00E5C4E7 /* LoginViewController.swift */; };
+		A835756B1E01E7AB00E5C4E7 /* AmazonWishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A835756A1E01E7AB00E5C4E7 /* AmazonWishlistViewController.swift */; };
+		A835756D1E02443400E5C4E7 /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = A835756C1E02443400E5C4E7 /* account.png */; };
+		A835756F1E0244E700E5C4E7 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A835756E1E0244E700E5C4E7 /* AccountViewController.swift */; };
 		A8CD16821DE2270C00EBA9FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD16811DE2270C00EBA9FB /* AppDelegate.swift */; };
 		A8CD168B1DE2270C00EBA9FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8CD168A1DE2270C00EBA9FB /* Assets.xcassets */; };
 		A8F698351DFF2E2800788F78 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F698341DFF2E2800788F78 /* BookDetailViewController.swift */; };
@@ -68,6 +71,9 @@
 		A835755F1E00F17200E5C4E7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A83575621E00F1EE00E5C4E7 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A83575641E01B51D00E5C4E7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A835756A1E01E7AB00E5C4E7 /* AmazonWishlistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmazonWishlistViewController.swift; sourceTree = "<group>"; };
+		A835756C1E02443400E5C4E7 /* account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = account.png; path = "CS498 Final Project/account.png"; sourceTree = "<group>"; };
+		A835756E1E0244E700E5C4E7 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		A8CD167E1DE2270C00EBA9FB /* CS498 Final Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CS498 Final Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8CD16811DE2270C00EBA9FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8CD168A1DE2270C00EBA9FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 				A818C7B21DFF2516006E3C39 /* library.png */,
 				A818C7B41DFF2516006E3C39 /* wishlist.png */,
 				A818C7B31DFF2516006E3C39 /* search.png */,
+				A835756C1E02443400E5C4E7 /* account.png */,
 				A818C7A01DFF2516006E3C39 /* appicon.png */,
 				A8CD16801DE2270C00EBA9FB /* CS498 Final Project */,
 				A8CD167F1DE2270C00EBA9FB /* Products */,
@@ -166,12 +173,14 @@
 			children = (
 				A835755E1E00F17200E5C4E7 /* LaunchScreen.storyboard */,
 				A835755F1E00F17200E5C4E7 /* Main.storyboard */,
+				A835756E1E0244E700E5C4E7 /* AccountViewController.swift */,
 				A8CD16811DE2270C00EBA9FB /* AppDelegate.swift */,
 				A83575641E01B51D00E5C4E7 /* LoginViewController.swift */,
 				A818C7711DFB2CB2006E3C39 /* LibraryTableViewController.swift */,
 				A818C7731DFB2CCA006E3C39 /* AddBookViewController.swift */,
 				A8F698341DFF2E2800788F78 /* BookDetailViewController.swift */,
 				A8F6985A1DFF4E2100788F78 /* WishlistTableViewController.swift */,
+				A835756A1E01E7AB00E5C4E7 /* AmazonWishlistViewController.swift */,
 				A83575621E00F1EE00E5C4E7 /* SearchViewController.swift */,
 				A8CD168A1DE2270C00EBA9FB /* Assets.xcassets */,
 				A8F6985C1DFF622600788F78 /* GoogleService-Info.plist */,
@@ -261,6 +270,7 @@
 				A818C7BE1DFF2516006E3C39 /* library-40.png in Resources */,
 				A818C7BA1DFF2516006E3C39 /* library-20@3x.png in Resources */,
 				A818C7C71DFF2516006E3C39 /* search.png in Resources */,
+				A835756D1E02443400E5C4E7 /* account.png in Resources */,
 				A8F6985D1DFF622600788F78 /* GoogleService-Info.plist in Resources */,
 				A818C7BF1DFF2516006E3C39 /* library-40@2x.png in Resources */,
 				A818C7BD1DFF2516006E3C39 /* library-29@3x.png in Resources */,
@@ -329,7 +339,9 @@
 				A8CD16821DE2270C00EBA9FB /* AppDelegate.swift in Sources */,
 				A8F698351DFF2E2800788F78 /* BookDetailViewController.swift in Sources */,
 				A8F6985B1DFF4E2100788F78 /* WishlistTableViewController.swift in Sources */,
+				A835756B1E01E7AB00E5C4E7 /* AmazonWishlistViewController.swift in Sources */,
 				A818C7721DFB2CB2006E3C39 /* LibraryTableViewController.swift in Sources */,
+				A835756F1E0244E700E5C4E7 /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
