@@ -23,45 +23,45 @@ class LibraryTableViewController: UITableViewController {
         super.viewDidLoad()
         let ref = FIRDatabase.database().reference()
         let user = FIRAuth.auth()?.currentUser?.uid
-        ref.child("library").child(user!).queryOrderedByKey().observeEventType(.ChildAdded, withBlock: { snapshot in
-            let title = snapshot.value!["title"] as! String
-            let author = snapshot.value!["author"] as! String
-            let coverURL = snapshot.value!["coverURL"] as! String!
+        ref.child("library").child(user!).queryOrderedByKey().observe(.childAdded, with: { snapshot in
+            let title = snapshot.value!["title"]
+            let author = snapshot.value!["author"]
+            let coverURL = snapshot.value!["coverURL"]
             self.books.insert(bookStruct(title: title, author: author, coverURL: coverURL), atIndex: 0)
             self.tableView.reloadData()
         })
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return books.count;
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("libraryCell", forIndexPath: indexPath)
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "libraryCell", for: indexPath as IndexPath)
         cell.textLabel?.text = books[indexPath.row].title
         cell.detailTextLabel?.text = books[indexPath.row].author
         if let url = NSURL(string: books[indexPath.row].coverURL) {
-            if let data = NSData(contentsOfURL: url) {
-                cell.imageView?.image = UIImage(data: data)
+            if let data = NSData(contentsOf: url as URL) {
+                cell.imageView?.image = UIImage(data: data as Data)
             }
         }
         return cell
     }
     
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
     
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            books.removeAtIndex(indexPath.row)
+   func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+//            books.removeAtIndex(indexPath.row)
             self.tableView.reloadData()
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "librarySegue" {
-            let destination = segue.destinationViewController as? BookDetailViewController
+            let destination = segue.destination as? BookDetailViewController
             let indexPath = tableView.indexPathForSelectedRow!
             let bTitle = books[indexPath.row].title
             let author = books[indexPath.row].author

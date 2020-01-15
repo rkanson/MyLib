@@ -17,8 +17,8 @@ class AmazonWishlistViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let bookURL = amazon + bTitle
-        let newBookURL: String = bookURL.stringByReplacingOccurrencesOfString(" ", withString: "%20")
-        UIWebView.loadRequest(webView)(NSURLRequest(URL: NSURL(string: newBookURL)!))
+        let newBookURL: String = bookURL.replacingOccurrences(of: " ", with: "%20")
+        UIWebView.loadRequest(webView)(NSURLRequest(url: NSURL(string: newBookURL)! as URL) as URLRequest)
     }
     
 }

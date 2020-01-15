@@ -26,8 +26,8 @@ class BookDetailViewController: UIViewController {
         authorField.text = author
         
         if let url = NSURL(string: coverURL) {
-            if let data = NSData(contentsOfURL: url) {
-                coverImage.image = UIImage(data: data)
+            if let data = NSData(contentsOf: url as URL) {
+                coverImage.image = UIImage(data: data as Data)
             }
         }
         

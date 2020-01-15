@@ -17,27 +17,25 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
     }
     
     @IBAction func takePhotoAction(sender: UIButton) {
         let picker = UIImagePickerController()
         picker.delegate = self
-        picker.sourceType = .Camera
-        presentViewController(picker, animated: true, completion: nil)
+        picker.sourceType = .camera
+        present(picker, animated: true, completion: nil)
     }
     
     @IBAction func selectPhotoAction(sender: UIButton) {
         let picker = UIImagePickerController()
         picker.delegate = self
-        picker.sourceType = .PhotoLibrary
-        presentViewController(picker, animated: true, completion: nil)
+        picker.sourceType = .photoLibrary
+        present(picker, animated: true, completion: nil)
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    private func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         coverImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func saveButtonAction(sender: UIButton) {
@@ -48,13 +46,13 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         let storageRef = FIRStorage.storage().reference().child(imgName)
         if let uploadData = UIImagePNGRepresentation(coverImage.image!) {
-            storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
+            storageRef.put(uploadData, metadata: nil, completion: { (metadata, error) in
                 if error != nil {
                     print(error)
                     return
                 }
                 if let coverIMGURL = metadata?.downloadURL()?.absoluteString {
-                    let book: [String: AnyObject] = ["author": author!, "title": title!, "coverURL": coverIMGURL]
+                    let book: [String: Dictionary] = ["author": author!, "title": title!, "coverURL": coverIMGURL]
                     let ref = FIRDatabase.database().reference()
                     let key = ref.child("books").childByAutoId().key
                     ref.child("library").child(user!).child(key).setValue(book)
@@ -62,7 +60,7 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
             })
         }
         
-        navigationController!.popViewControllerAnimated(true)
+        navigationController!.popViewController(animated: true)
     }
     
     func dismissKeyboard() {

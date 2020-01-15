@@ -21,8 +21,8 @@ class WishlistTableViewController: UITableViewController {
         super.viewDidLoad()
         let ref = FIRDatabase.database().reference()
         let user = FIRAuth.auth()?.currentUser?.uid
-        ref.child("wishlist").child(user!).queryOrderedByKey().observeEventType(.ChildAdded, withBlock: { snapshot in
-            let title = snapshot.value!["title"] as! String
+        ref.child("wishlist").child(user!).queryOrderedByKey().observe(.childAdded, with: { snapshot in
+            let title = snapshot.value!["title"]
             self.books.insert(bookStruct2(title: title), atIndex: 0)
             self.tableView.reloadData()
         })
@@ -30,48 +30,47 @@ class WishlistTableViewController: UITableViewController {
     
     @IBAction func addToWishlist(sender: AnyObject) {
         var titleTextField: UITextField?
-        let alertController = UIAlertController(title: "Add to Wishlist", message: "Please enter a book title.", preferredStyle: .Alert)
-        let ok = UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+        let alertController = UIAlertController(title: "Add to Wishlist", message: "Please enter a book title.", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
             let ref = FIRDatabase.database().reference()
             let user = FIRAuth.auth()?.currentUser!.uid
             let key = ref.child("books").childByAutoId().key
             ref.child("wishlist").child(user!).child(key).child("title").setValue(titleTextField?.text)
         })
-        let cancel = UIAlertAction(title: "Cancel", style: .Cancel) { (action) -> Void in
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
         }
         alertController.addAction(ok)
         alertController.addAction(cancel)
-        alertController.addTextFieldWithConfigurationHandler { (textField) -> Void in
+        alertController.addTextField { (textField) -> Void in
             titleTextField = textField
             titleTextField?.placeholder = "Book Title"
         }
-        presentViewController(alertController, animated: true, completion: nil)
+        present(alertController, animated: true, completion: nil)
     }
     
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
     
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            books.removeAtIndex(indexPath.row)
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
             self.tableView.reloadData()
         }
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return books.count;
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("wishlistCell", forIndexPath: indexPath)
+   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "wishlistCell", for: indexPath as IndexPath)
         cell.textLabel?.text = books[indexPath.row].title
         return cell
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "wishlistSegue" {
-            let destination = segue.destinationViewController as? AmazonWishlistViewController
+            let destination = segue.destination as? AmazonWishlistViewController
             let indexPath = tableView.indexPathForSelectedRow!
             let bTitle = books[indexPath.row].title
             destination?.bTitle = bTitle

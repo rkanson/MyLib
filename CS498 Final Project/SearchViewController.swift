@@ -14,7 +14,7 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         let url = NSURL (string: "https://www.amazon.com/gp/aw/ref=aw_c_gw")
-        let requestObj = NSURLRequest(URL: url!)
-        webView.loadRequest(requestObj)
+        let requestObj = NSURLRequest(url: url! as URL)
+        webView.loadRequest(requestObj as URLRequest)
     }
 }

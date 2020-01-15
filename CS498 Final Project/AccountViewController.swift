@@ -16,19 +16,19 @@ class AccountViewController: UIViewController {
     }
     
     @IBAction func changePassword(sender: AnyObject) {
-        FIRAuth.auth()?.sendPasswordResetWithEmail((FIRAuth.auth()?.currentUser?.email)!, completion: { (error) in })
-        let alertController = UIAlertController(title: "Password Change", message: "An email to change your password has been sent.", preferredStyle: .Alert)
-        let ok = UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+        FIRAuth.auth()?.sendPasswordReset(withEmail: (FIRAuth.auth()?.currentUser?.email)!, completion: { (error) in })
+        let alertController = UIAlertController(title: "Password Change", message: "An email to change your password has been sent.", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
         })
         alertController.addAction(ok)
-        presentViewController(alertController, animated: true, completion: nil)
+        present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func logoutPressed(sender: AnyObject) {
         try! FIRAuth.auth()?.signOut()
         if let storyboard = self.storyboard {
-            let vc = storyboard.instantiateViewControllerWithIdentifier("loginController") as! LoginViewController
-            self.presentViewController(vc, animated: false, completion: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "loginController") as! LoginViewController
+            self.present(vc, animated: false, completion: nil)
         }
     }
     
